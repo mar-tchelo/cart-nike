@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container .card{
+    
+    width: 263px;
+    height: 386px;
+
+    border-radius: 16px 50px 16px 16px;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+
+}
+
+.container .card .shoes{
+    position: absolute;
+    top: -200px;
+    right: -120px;
+
+    z-index: 99;
+
+}
+
+.shadow{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 16px 50px 16px 16px;
+
+    position: absolute;
+
+    overflow: hidden;
+    
+}
+
+.shadow::after{
+    content: '';
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    background: linear-gradient(114.61deg, rgba(196,196,196,0.3) -19.5%, rgba(196,196,196,0) 120%);
+    border-radius: 50%;
+    transform: rotate(20deg);
+    top: -160px;
+    left: -20px;
+}
+
+.card-content{
+    width: 100%;
+    height: 100%;
+
+    padding: 115px 20px 0;
+
+    font-family:'Montserrat', sans-serif ;
+}
+
+.card-content .subtitle{
+    font-weight: 700;
+    color: #8f8f8f;
+}
+
+.card-content .title{
+    margin-top: 8px;
+
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+
+    color: #29455f;
+    
+}
+
+.card-content .price{
+    display: flex;
+    margin: 10px 0;
+
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+
+    color: #29455f;
+
+}
+
+.card-content .price span{
+    
+    font-size: 14px;
+    color: #808080;
+    margin-right: 5px;
+}
+
+.card-content .action-container{
+    
+    
+    display: flex;
+}
+
+.action-container .shoes-options{
+    
+    flex-grow: 1;
+    
+}
+
+.shoes-options p{
+    
+   
+    font-family:'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #808080;
+}
+
+.shoes-options .color-options{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    margin: 10px 0;
+    
+    justify-content: space-between;
+    
+}
+
+.shoes-options .color-options .color{
+    width: 18px;
+    height: 18px;
+    background:  #85db48;
+    border-radius: 50%;
+}
+
+.shoes-options .color:nth-child(2){
+    background: #ff3838;
+}
+
+.shoes-options .color:nth-child(3){
+    background: #3864ff;
+}
+
+.shoes-options .color.selected{
+    width: 21px;
+    height: 21px;
+    position: relative;
+
+}
+.shoes-options .color.selected::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    top: -3px;
+    left: -2.5px;
+}
+
+.shoes-options .size-options{
+    width: 100px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.size-options .size{
+    width: 23px;
+    height: 23px;
+   
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+   
+    font-family: 'Montserrat',sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #808080;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.size-options .size.selected{
+    background: #85db48;
+    font-weight: bold;
+    color: #ffffff;
+    border:0px ;
+}
+
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cart button{
+    width: 49px;
+    height: 80px;
+
+    background: #85DB48;
+    color: #ffffff;
+    border-radius: 16px;
+    border: 0px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.cart button i:nth-child(1){
+    opacity: 0.3;
+}
+.cart button i:nth-child(2){
+    opacity: 0.6;
+}
+
+button .cart-shopping{
+    margin-top: 8px;
+    
+}
